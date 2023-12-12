@@ -33,4 +33,26 @@
   .tab-contents.active-tab {
     display: block;
   }
+
   
+
+
+
+
+
+
+.form-div{
+    display: flex;
+    flex-direction: column;
+  }
+
+ .form-input {    padding: 5px;
+    margin: 5px 0px;
+    border-radius: 5px;
+    border: 2px solid lightgrey;
+}
+.full-width-btn{
+    background-color: green;
+    color: white;
+    margin-top: 20px;
+}

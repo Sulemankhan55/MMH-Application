@@ -18,49 +18,58 @@ const Dashboard = () => {
       </div>
       <div className={`tab-contents ${activeTab === 'patientInquiry' ? 'active-tab' : ''}`} id="patientInquiry">
         
-      <form class="form-group">
+      <form className="form-div">
         <h2>Please fill out all information, so that we may better server you.</h2>
-        <div class="form-group">
-          <label for="first_name">First Name</label>
-          <input type="text" class="form-control" id="first_name" placeholder="First Name" required autofocus autocomplete="on"/>
-          <span class="help-block"></span>
+
+        <div className="form-div">
+          <label for="full_name">Patient Full Name</label>
+          <input type="text" className="form-input" id="full_name" placeholder="First Name" required autofocus autocomplete="on"/>
+          <span className="help-block"></span>
+        </div> 
+
+
+        <div className="form-div">
+          <label for="phone_number">Patient Phone Number</label>
+          <input type="tel" className="form-input" id="phone_number" placeholder="+1-416-967-1111"/>
+          <span className="help-block"></span>
         </div>
-        <div class="form-group">
-          <label for="last_name">Last Name</label>
-          <input type="text" class="form-control" id="last_name" placeholder="Last Name" required autofocus autocomplete="on"/>
-          <span class="help-block"></span>
-        </div>  
-        <div class="form-group">
-          <label for="email_address">Email Address</label>
-          <input type="email" class="form-control" id="email_addr" placeholder="Email address" required/>
-          <span class="help-block"></span>
+
+        <div className="form-div">
+          <label for="gender">Patient Gender</label>
+          <select id="gender" name="gender" required className='form-input'>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+          <span className="help-block"></span>
         </div>
-        <div class="form-group">
-          <label for="email_address_confirm">Please re-confirm your email address.</label>
-          <input type="email" class="form-control" id="email_address_confirm" placeholder="Confirm email address" required autocomplete="off"/>
-          <span class="help-block"></span>
-        </div>
-        <div class="form-group">
-          <label for="phone_number">Phone Number</label>
-          <input type="tel" class="form-control" id="phone_number" placeholder="+1-416-967-1111"/>
-          <span class="help-block"></span>
-        </div>
-        <div class="form-group">
-          <label for="dob">Date of Birth</label>
-          <input type="date" class="form-control" id="dob"/>
-          <span class="help-block"></span>
-        </div>
-        <div class="form-group">
+
+
+        <div className="form-div">
           <label for="age">Age</label>
-          <input type="number" class="form-control" id="age" placeholder="Age" min="1" max="110" required/>
-          <span class="help-block"></span>
-        </div>     
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Make appointment</button>
+          <input type="number" className="form-input" id="age" placeholder="Age" min="1" max="110" required/>
+          <span className="help-block"></span>
+        </div>  
+
+        <div className="form-div">
+          <label for="state">State</label>
+          <select id="state" name="state" required className='form-input'>
+          <option value="Male">Male</option>
+
+        </select>
+          <span className="help-block"></span>
+        </div>
+
+          <div className="form-div">
+          <label for="Address">Patient Full Address</label>
+          <input type="text" className="form-input" id="Address" placeholder="Address" required  />
+          <span className="help-block"></span>
+        </div> 
+
+        <button className="full-width-btn" type="submit">Confirm Appointment</button>
       </form>
       </div>
 
-
-      
       <div className={`tab-contents ${activeTab === 'experience' ? 'active-tab' : ''}`} id="experience">
         <p>Experience Content</p>
       </div>
